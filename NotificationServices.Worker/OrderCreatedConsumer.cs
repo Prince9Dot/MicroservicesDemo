@@ -9,11 +9,14 @@ namespace NotificationService.Worker;
 public class OrderCreatedConsumer : BackgroundService
 {
     private readonly ILogger<OrderCreatedConsumer> _logger;
+    private readonly IConfiguration _configuration;
 
     public OrderCreatedConsumer(
-        ILogger<OrderCreatedConsumer> logger)
+        ILogger<OrderCreatedConsumer> logger,
+        IConfiguration configuration)
     {
         _logger = logger;
+        _configuration = configuration;
     }
 
     protected override async Task ExecuteAsync(
@@ -21,9 +24,9 @@ public class OrderCreatedConsumer : BackgroundService
     {
         var factory = new ConnectionFactory
         {
-            HostName = "localhost",
-            UserName = "guest",
-            Password = "guest"
+            HostName = _configuration["RabbitMQ:HostName"] ?? "localhost",
+            UserName = _configuration["RabbitMQ:UserName"] ?? "guest",
+            Password = _configuration["RabbitMQ:Password"] ?? "guest"
         };
 
         _logger.LogInformation("Connecting to RabbitMQ...");
