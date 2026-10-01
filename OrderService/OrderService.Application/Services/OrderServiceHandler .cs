@@ -47,7 +47,6 @@ namespace OrderService.Application.Services
                     "Quantity must be greater than zero.");
             }
 
-            // Get product information from ProductService
             var product = await _productServiceClient
                 .GetProductAsync(request.ProductId);
 
