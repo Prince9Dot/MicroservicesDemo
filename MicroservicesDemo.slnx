@@ -1,0 +1,25 @@
+<Solution>
+  <Folder Name="/OrderService/">
+    <Project Path="NotificationServices.Worker/NotificationServices.Worker.csproj" Id="14640ed3-def3-4e74-8008-4eea3f34ef21" />
+    <Project Path="OrderService/OrderService.API/OrderService.API.csproj" />
+    <Project Path="OrderService/OrderService.Application/OrderService.Application.csproj" />
+    <Project Path="OrderService/OrderService.Domain/OrderService.Domain.csproj" />
+    <Project Path="OrderService/OrderService.Infrastructure/OrderService.Infrastructure.csproj" />
+    <Project Path="Shared.Contracts/Shared.Contracts.csproj" Id="2433abef-5f82-4dae-a0da-f08657576063" />
+  </Folder>
+  <Folder Name="/ProductService/">
+    <Project Path="ProductService/ProductService.API/ProductService.API.csproj" />
+    <Project Path="ProductService/ProductService.Application/ProductService.Application.csproj" />
+    <Project Path="ProductService/ProductService.Domain/ProductService.Domain.csproj" />
+    <Project Path="ProductService/ProductService.Infrastructure/ProductService.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path="docker-compose.yml" />
+    <File Path="Dockerfile.gateway" />
+    <File Path="Dockerfile.notification" />
+    <File Path="Dockerfile.order" />
+    <File Path="Dockerfile.product" />
+  </Folder>
+  <Project Path="ApiGateway/ApiGateway.csproj" Id="309d18cd-a31d-4663-8f5c-78870e2b9196" />
+</Solution>
